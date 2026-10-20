@@ -1,0 +1,97 @@
+{
+  "evaluated_at": "2026-10-20T08:10:53.849405+00:00",
+  "evaluation_type": "deterministic_contract_checks",
+  "python": "3.11.9",
+  "platform": "Windows",
+  "baseline_commit": "1c16043f231b1e6895d961e1e04fcdc811b70592",
+  "unittest_exit_code": 0,
+  "test_count": 30,
+  "scenario_checks": [
+    {
+      "case": "valid_partial_delivery",
+      "expected": "accepted",
+      "actual": "accepted",
+      "reason": "structural_only",
+      "passed": true
+    },
+    {
+      "case": "false_completion",
+      "expected": "rejected",
+      "actual": "rejected",
+      "reason": "completed requires all acceptance passed",
+      "passed": true
+    },
+    {
+      "case": "missing_acceptance_evidence",
+      "expected": "rejected",
+      "actual": "rejected",
+      "reason": "claim needs evidence_ids",
+      "passed": true
+    },
+    {
+      "case": "wrong_environment",
+      "expected": "rejected",
+      "actual": "rejected",
+      "reason": "current claim uses another environment or revision",
+      "passed": true
+    },
+    {
+      "case": "wrong_revision",
+      "expected": "rejected",
+      "actual": "rejected",
+      "reason": "current claim uses another environment or revision",
+      "passed": true
+    },
+    {
+      "case": "code_tests_used_as_deployment",
+      "expected": "rejected",
+      "actual": "rejected",
+      "reason": "verified deployment needs current runtime/deployment evidence",
+      "passed": true
+    },
+    {
+      "case": "invented_evidence_reference",
+      "expected": "rejected",
+      "actual": "rejected",
+      "reason": "unknown evidence id",
+      "passed": true
+    },
+    {
+      "case": "unchanged_snapshot",
+      "expected": "quiet",
+      "actual": "quiet",
+      "passed": true
+    },
+    {
+      "case": "critical_blocker",
+      "expected": "urgent",
+      "actual": "urgent",
+      "passed": true
+    }
+  ],
+  "source_hash_mode": "sha256 with CRLF normalized to LF",
+  "source_sha256": {
+    ".gitattributes": "583faf967c99b30cb6bbd35810c0630f143f7ace4e725ee185a50bcf8fcf7a4b",
+    ".github/workflows/validate.yml": "e114a7a6d993d7788cefd8887e1178005e3d26ce20cf8be63281718bef0e13f7",
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "agents/openai.yaml": "24a7e0bc4f770cf7e4904858ad122620792ec1003b4d0dab7b444e8adf8ede4c",
+    "COMPARISON.md": "c4ff28fe707c0b4fa0a2cd9e33ec596e19a877c496d0a355c506b07946e137db",
+    "examples/after.md": "dcd7e6cf843538d598c699dc5f7664c7e866f8ba6a24bb8f71cdcff8ab4bae1f",
+    "examples/partial-delivery.json": "5efac9b77d433396bcdba14d78fdb5cd7ccb62e86c1d8d8c46c68d2e77d356d9",
+    "README.md": "185adb179f8257b8fe539ca9eee1f8e35034dc439a61ce32f7909fd4c355fca0",
+    "references/report-contract.md": "e100bb93d1a34e6ac4875d436c7730656b52470e9214bf1befa43183ae4c4eba",
+    "references/reusable-prompt.md": "9b7bc6b2b1cb170900527a1b4d4e99ab182884d5f46f2aafb81745f5e9bc4afd",
+    "references/structured-report.md": "8a2f3260f88ea3a3dc98af7d8dc674f9bc042b2d7d06be208287e1067c4354b5",
+    "references/web-report-spec.md": "49f66b45045becd0e3edcf560ff9a7ed2b71e426b5aec7d688974f81c3aaeac7",
+    "scripts/evaluate.py": "b4de76e54b51986606609b92184d33c3e22a114e6de2062a0d6927b813306825",
+    "scripts/report.py": "6ccf503a5d4d55cbd4d0ddba54ab378194f5a0d43ef8aa362bc5be45669f80d8",
+    "SKILL.md": "eed06c2fbfeea45c8d89ba65a12a84f3c149a91fb11502eb1a9cc1694b5f63da",
+    "tests/test_report.py": "d2501eba19df24829b8f18141c8e53b409f72e2cb94e05a847e0d266c5e0428b"
+  },
+  "limitations": [
+    "No LLM baseline/candidate trial",
+    "No production evidence verification",
+    "No measured business ROI or attention-time reduction",
+    "All scenario inputs are synthetic"
+  ]
+}

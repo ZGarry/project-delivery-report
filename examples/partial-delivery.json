@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "task_id": "synthetic-report-example",
+  "title": "演示：导出功能阶段交付（合成数据）",
+  "as_of": "2026-10-20T10:00:00+08:00",
+  "environment": "demo-local",
+  "revision": "demo-v2",
+  "goal": "完成导出并在目标环境验收；所有数字仅用于合成案例",
+  "status": "partial",
+  "delivery": {
+    "code": "verified",
+    "deployment": "unverified"
+  },
+  "acceptance": [
+    {
+      "id": "A1",
+      "criterion": "本地导出测试",
+      "status": "passed",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    {
+      "id": "A2",
+      "criterion": "目标环境业务验收",
+      "status": "unverified",
+      "evidence_ids": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "test",
+      "location": "synthetic://local-export-test",
+      "observed_at": "2026-10-20T09:30:00+08:00",
+      "environment": "demo-local",
+      "revision": "demo-v2",
+      "summary": "合成测试记录，仅用于结构演示",
+      "collector": "synthetic-fixture"
+    }
+  ],
+  "outcomes": [
+    {
+      "claim": "本地测试有记录；目标部署及业务验收尚未核验",
+      "basis": "observed",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    {
+      "claim": "节省人工时间尚未测量",
+      "basis": "unmeasured",
+      "evidence_ids": []
+    }
+  ],
+  "metrics": [],
+  "blockers": [
+    {
+      "summary": "缺少目标环境验收记录",
+      "impact": "不能声称全部完成或上线可用",
+      "next_action": "在授权范围内补齐环境核验与业务测试",
+      "severity": "normal",
+      "requires_user": false
+    }
+  ],
+  "decision": null,
+  "next_step": "完成目标环境核验后汇报；本例没有配置后台跟进"
+}

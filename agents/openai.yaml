@@ -1,4 +1,4 @@
 interface:
-  display_name: "项目交付汇报"
-  short_description: "为大需求交付可审阅网页，以真实截图说明新增能力、替换一致性和实测收益"
-  default_prompt: "使用 $project-delivery-report，明确本次目标与交付物，并生成与需求规模相称、以真实截图和验收证据为依据的交付报告。"
+  display_name: "项目交付与主动汇报"
+  short_description: "主动汇报结果、异常与必要决策，用真实证据解释交付状态和前后收益"
+  default_prompt: "使用 $project-delivery-report 完成当前任务的主动汇报：先给结论和成果入口，区分源码、部署、验收和收益，列出重要缺口、必要决策及下一步。"
