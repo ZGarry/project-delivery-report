@@ -1,0 +1,4 @@
+interface:
+  display_name: "项目交付汇报"
+  short_description: "为大需求交付可审阅网页，以真实截图说明新增能力、替换一致性和实测收益"
+  default_prompt: "使用 $project-delivery-report，明确本次目标与交付物，并生成与需求规模相称、以真实截图和验收证据为依据的交付报告。"
